@@ -9,7 +9,7 @@ Nathan will drink, rounded to the smallest value.
 
 For example:
 
-time = 3 ----> litres = 1
+time = 2 ----> litres = 1
 
 time = 6.7---> litres = 3
 
@@ -19,6 +19,6 @@ time = 11.8--> litres = 5
 
 
 def litres(time):
-    one_hour = 0.5
-    
-
+    counter_time = time * 0.5
+    rounded_number = int(counter_time)
+    return rounded_number
