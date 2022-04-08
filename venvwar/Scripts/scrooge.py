@@ -37,6 +37,19 @@ Desired Principal 'D' is equal to Principal 'P' this should return 0 Years.
 
 
 def calculate_years(principal, interest, tax, desired):
-    raise NotImplementedError("TODO: calculate_years")
+    years = 0
+    if principal == desired:
+        return years
 
- 
+    else:
+        while principal <= desired:
+            interest_simple = principal * interest * years
+            tax_rate = tax * 100
+            interest_minus_taxes = interest_simple - tax_rate * interest_simple / 100
+            principal = principal + interest_minus_taxes
+            years += 1
+
+    return years
+
+
+print(calculate_years(1000, 0.01625, 0.18, 1200))
