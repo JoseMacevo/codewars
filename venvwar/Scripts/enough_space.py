@@ -27,7 +27,7 @@ cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
 
 def enough(cap, on, wait):
     if wait + on > cap:
-        left_over = wait+on-cap
+        left_over = wait + on - cap
         return left_over
     else:
         get_in = 0
